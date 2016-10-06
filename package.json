@@ -5,14 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"webpack-dev-server src/index.js",
-    "postinstall":"webpack -p",
-     "start":"node server.js"
+    "dev": "webpack-dev-server src/index.js",
+    "postinstall": "webpack -p",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "webpack": "^1.13.2"

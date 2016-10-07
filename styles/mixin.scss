@@ -1,0 +1,14 @@
+$desktopBreak: 800px;
+$phoneBreak: 480px;
+
+@mixin desktop{
+  @media only screen and (min-width:$desktopBreak){
+    @content
+  }
+};
+
+@mixin phone{
+  @media only screen and (min-width:$phoneBreak){
+    @content
+  }
+}

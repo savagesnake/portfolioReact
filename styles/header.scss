@@ -3,8 +3,26 @@
   z-index:99;
   color:$white;
   background-color: $whiteTransparent;
+  padding:1em;
 }
+@include desktop {
+  //navigation
+  .nav-wrap{
+    text-align: right;
+  }
+}
+#nav{
+  li {
+    display:inline-block;
+    padding-left:.8em;
+  }
+}
+//fillter, background-image for header
 .header-wrap{
+    .header-inner-wrap{
+      background-color: rgba(21, 24, 25, 0.93);
+      height:100%;
+    }
     &.header-bg{
       background-image: url("../public/images/headerBg.jpg");
       background-size:cover;

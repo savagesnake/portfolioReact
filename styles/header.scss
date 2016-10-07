@@ -5,6 +5,10 @@
   background-color: $whiteTransparent;
 }
 .header-wrap{
+    &.header-bg{
+      background-image: url("../public/images/headerBg.jpg");
+      background-size:cover;
+    }
   background-color:$header;
   position:absolute;
   left:0;

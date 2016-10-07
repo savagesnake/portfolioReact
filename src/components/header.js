@@ -5,7 +5,7 @@ export default class Header extends Component{
     return(
       <div id="header">
         <header>
-          <h1>Header Section</h1>
+          <h1>Header Section!!</h1>
           </header>
       </div>
     )

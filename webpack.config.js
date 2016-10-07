@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   // devtool:"eval",
@@ -30,12 +31,13 @@ module.exports = {
       test:/\.css$/, loader:'style!css'
     },
     {
-      test:/\.scss$/, loader:'style!css!sass'
+      test:/\.scss$/, loader: ExtractTextPlugin.extract('css!sass')
     }
   ]
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin("style.css")
   ]
 };

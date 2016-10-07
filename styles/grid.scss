@@ -1,0 +1,24 @@
+// grid size
+$max: 16;
+
+#row{
+  &:after{
+    content: '';
+    clear: both;
+    display: block;
+  }
+  margin-bottom:15px;
+}
+
+#row > div{
+   padding:.8em;
+   float: left;
+}
+
+@for $i from 1 through $max{
+  $equ: 100% / $i;
+
+  #row.cell-#{$i} > div{
+    width:$equ;
+  }
+}

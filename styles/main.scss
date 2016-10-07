@@ -1,7 +1,4 @@
-$red: #f7f7f7;
-$mainColor: #454545;
-html{
-background-color: $red;
-padding:50px;
-color:$mainColor;
-}
+@import "variables";
+@import "base";
+@import "grid";
+@import "header";

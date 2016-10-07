@@ -11,8 +11,8 @@ module.exports = {
     './src'
   ],
   output:{
-    path:path.join(__dirname,'src'),
-    filename:'src/bundle.js'
+    path:path.join(__dirname),
+    filename:'./src/bundle.js'
   },
   resolve:{
     moduleDirectories:['node_modules','src'],
@@ -23,7 +23,13 @@ module.exports = {
       {
       test:/\.jsx?$/,
       exclude: /node_modules/,
-      loaders: [ 'babel?presets[]=react,presets[]=es2015']
+      loaders: ['babel?presets[]=react,presets[]=es2015']
+    },
+    {
+      test:/\.css$/, loader:'style!css'
+    },
+    {
+      test:/\.scss$/, loader:'style!css!sass'
     }
   ]
   },

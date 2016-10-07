@@ -1,13 +1,24 @@
 #top-bar{
   position: relative;
   z-index:99;
+  color:$white;
+  background-color: $whiteTransparent;
 }
 .header-wrap{
-  background-color:gray;
+  background-color:$header;
   position:absolute;
   left:0;
   right:0;
   top:0;
   bottom:0;
   text-align: center;
+}
+.header-content{
+  color:$white;
+  height:200px;
+  width:100%;
+  top:0;
+  bottom:0;
+  margin: auto;
+  position: absolute;
 }

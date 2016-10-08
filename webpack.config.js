@@ -4,18 +4,18 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-  // devtool:"eval",
-  // entry:'./src/index.js',
-  devtool:"inline-source-map",
-  entry:[
-    'webpack-dev-server/client?http://127.0.0.1:8080/',
-    'webpack/hot/only-dev-server',
-    './src'
-  ],
+  devtool:"eval",
+  entry:'./src/index.js',
+  // devtool:"inline-source-map",
+  // entry:[
+  //   'webpack-dev-server/client?http://127.0.0.1:8080/',no
+  //   'webpack/hot/only-dev-server',
+  //   './src'
+  // ],
   output:{
     path:path.join(__dirname,'/public'),
-    filename:'./src/bundle.js',
-    publicPath:'/public/'
+    filename:'./src/bundle.js'
+    // publicPath:'/public/'
   },
   resolve:{
     moduleDirectories:['node_modules','src'],
@@ -26,7 +26,7 @@ module.exports = {
       {
       test:/\.jsx?$/,
       exclude: /node_modules/,
-      loaders: ['babel?presets[]=react,presets[]=es2015']
+      loader: 'babel-loader'
     },
     {
       test:/\.css$/, loader:'style!css'
@@ -34,7 +34,8 @@ module.exports = {
     {
       test:/\.scss$/, loader: ExtractTextPlugin.extract('css!sass')
     },
-    { test: /\.jpg$/, loader: 'file' }
+    { test: /\.jpg$/, loader: 'file-loader' },
+    {test:/\.png$/,loader:'file-loader'}
   ]
   },
   plugins:[

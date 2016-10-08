@@ -13,63 +13,48 @@ ul {
     clear: both;
     display: block; }
 
-#row > div {
-  padding: .8em;
-  float: left; }
-
-#row.cell-1 > div {
-  width: 100%; }
-
-#row.cell-2 > div {
-  width: 50%; }
-
-#row.cell-3 > div {
-  width: 33.33333%; }
-
-#row.cell-4 > div {
-  width: 25%; }
-
-#row.cell-5 > div {
-  width: 20%; }
-
-#row.cell-6 > div {
-  width: 16.66667%; }
-
-#row.cell-7 > div {
-  width: 14.28571%; }
-
-#row.cell-8 > div {
-  width: 12.5%; }
-
-#row.cell-9 > div {
-  width: 11.11111%; }
-
-#row.cell-10 > div {
-  width: 10%; }
-
-#row.cell-11 > div {
-  width: 9.09091%; }
-
-#row.cell-12 > div {
-  width: 8.33333%; }
-
-#row.cell-13 > div {
-  width: 7.69231%; }
-
-#row.cell-14 > div {
-  width: 7.14286%; }
-
-#row.cell-15 > div {
-  width: 6.66667%; }
-
-#row.cell-16 > div {
-  width: 6.25%; }
+@media only screen and (min-width: 800px) {
+  #row > div {
+    float: left; }
+  #row.cell-1 > div {
+    width: 100%; }
+  #row.cell-2 > div {
+    width: 50%; }
+  #row.cell-3 > div {
+    width: 33.33333%; }
+  #row.cell-4 > div {
+    width: 25%; }
+  #row.cell-5 > div {
+    width: 20%; }
+  #row.cell-6 > div {
+    width: 16.66667%; }
+  #row.cell-7 > div {
+    width: 14.28571%; }
+  #row.cell-8 > div {
+    width: 12.5%; }
+  #row.cell-9 > div {
+    width: 11.11111%; }
+  #row.cell-10 > div {
+    width: 10%; }
+  #row.cell-11 > div {
+    width: 9.09091%; }
+  #row.cell-12 > div {
+    width: 8.33333%; } }
 
 #top-bar {
   position: relative;
   z-index: 99;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em; }
+
+@media only screen and (min-width: 800px) {
+  .nav-wrap {
+    text-align: right; } }
+
+#nav li {
+  display: inline-block;
+  padding-left: .8em; }
 
 .header-wrap {
   background-color: #0f171b;
@@ -79,6 +64,12 @@ ul {
   top: 0;
   bottom: 0;
   text-align: center; }
+  .header-wrap .header-inner-wrap {
+    background-color: rgba(21, 24, 25, 0.93);
+    height: 100%; }
+  .header-wrap.header-bg {
+    background-image: url(ac6eb15b4c7d74c360d3806ed1ca973f.jpg);
+    background-size: cover; }
 
 .header-content {
   color: #fff;

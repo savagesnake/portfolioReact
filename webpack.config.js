@@ -8,7 +8,7 @@ module.exports = {
   entry:'./src/index.js',
   // devtool:"inline-source-map",
   // entry:[
-  //   'webpack-dev-server/client?http://127.0.0.1:8080/',no
+  //   'webpack-dev-server/client?http://127.0.0.1:8080/',
   //   'webpack/hot/only-dev-server',
   //   './src'
   // ],
@@ -26,7 +26,7 @@ module.exports = {
       {
       test:/\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader'
+      loader:'babel-loader'
     },
     {
       test:/\.css$/, loader:'style!css'

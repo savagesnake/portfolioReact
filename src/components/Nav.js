@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import headerHeight from '../scripts/header.js';
 export default class Nav extends Component{
   componentDidMount(){
-
+    headerHeight();
   }
   render(){
     return(

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-
 export default class Nav extends Component{
+  componentDidMount(){
+
+  }
   render(){
     return(
       <div id="top-bar">

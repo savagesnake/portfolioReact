@@ -1,6 +1,11 @@
 import React, {Component}  from 'react';
-var iconLogo = require("../../public/images/wolfgangIcon.png")
+import header from "../scripts/header.js";
+var iconLogo = require("../../public/images/wolfgangIcon.png");
+
 export default class Header extends Component{
+  componentDidMount(){
+
+  }
   render(){
     return(
       <div className="header-wrap header-bg">

@@ -1,9 +1,13 @@
 #top-bar{
-  position: relative;
-  z-index:99;
+  z-index:999;
   color:$white;
   background-color: $whiteTransparent;
   padding:1em;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+
 }
 @include desktop {
   //navigation
@@ -19,6 +23,9 @@
 }
 //fillter, background-image for header
 .header-wrap{
+  background-color:$header;
+  text-align: center;
+  height:100%;
     .header-inner-wrap{
       background-color: rgba(21, 24, 25, 0.93);
       height:100%;
@@ -27,13 +34,6 @@
       background-image: url("../public/images/headerBg.jpg");
       background-size:cover;
     }
-  background-color:$header;
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  text-align: center;
 }
 .header-content{
   color:$white;
@@ -42,5 +42,4 @@
   top:0;
   bottom:0;
   margin: auto;
-  position: absolute;
 }

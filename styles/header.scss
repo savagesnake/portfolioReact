@@ -44,19 +44,21 @@
   margin: auto;
 }
 
-.sprite {
-    background-image: url('../public/images/linkedin-logo.png');    background-repeat: no-repeat;
+.social-link {
+    color:#fff;
     background-position:center;
     display: inline-block;
     cursor: pointer;
-    border: 2px solid #e8e7e7;
-    padding: 1.8em;
+    border: 1px solid #e8e7e7;
+    text-align: center;
     position:relative;
+    padding:15px;
+    width:64px;
+    height:64px;
     background-color:transparent;
-    width:34px;
-    height:34px;
-    @include border-radius(50%);
-    &:before{
+    @include border-radius(100px);
+
+    &:after{
       @include transition(all 300ms ease-in-out);
       @include scale(0.1);
       content: '';
@@ -70,8 +72,8 @@
       right:0;
       bottom:0;
     }
-    
-    &:hover:before{
+
+    &:hover:after{
       @include scale(1);
       opacity:1;
     }

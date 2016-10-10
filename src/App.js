@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Nav from "./components/Nav";
 require('../styles/styles.js');
 require('normalize.css');
+require('font-awesome-webpack');
 export default class App extends Component{
   render(){
     return(

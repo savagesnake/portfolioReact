@@ -11,4 +11,33 @@ $phoneBreak: 480px;
   @media only screen and (min-width:$phoneBreak){
     @content
   }
+};
+
+@mixin transform($transform){
+  -webkit-transform:$transform;
+  -moz-transform:$transform;
+  -ms-transform:$transform;
+  -o-transform:$transform;
+  transform:$transform;
+}
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    -o-border-radius:$radius;
+    border-radius:$radius;
+}
+
+@mixin transition($value){
+   -webkit-transition:$value;
+   -moz-transition:$value;
+   -ms-transition:$value;
+   -o-transition:$value;
+   transition:$value;
+}
+
+@mixin scale($value){
+  @include transform(scale(#{$value}));
 }

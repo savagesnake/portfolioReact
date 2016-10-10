@@ -36,9 +36,19 @@ module.exports = {
     {
       test:/\.scss$/, loader: ExtractTextPlugin.extract('css!sass')
     },
-    { test: /\.jpg$/, loader: 'file-loader' },
-    {test:/\.png$/,loader:'file-loader'}
+    { test: /\.(jpg|png)$/, loader: 'file-loader' },
+    { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
   ]
+  },
+  tyles: {
+    "mixins": true,
+
+    "core": true,
+    "icons": true,
+
+    "larger": true,
+    "path": true,
   },
   plugins:[
     new webpack.HotModuleReplacementPlugin(),

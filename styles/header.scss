@@ -1,7 +1,6 @@
 #top-bar{
   z-index:999;
   color:$white;
-  background-color: $whiteTransparent;
   padding:1em;
   position:absolute;
   left:0;
@@ -24,11 +23,12 @@
 //fillter, background-image for header
 .header-wrap{
   background-color:$header;
-  text-align: center;
   height:100%;
     .header-inner-wrap{
       background-color: rgba(21, 24, 25, 0.93);
       height:100%;
+      position:relative;
+      z-index:0;
     }
     &.header-bg{
       background-image: url("../public/images/headerBg.jpg");
@@ -36,10 +36,46 @@
     }
 }
 .header-content{
+  text-align: center;
   color:$white;
-  height:200px;
   width:100%;
   top:0;
   bottom:0;
   margin: auto;
+}
+
+.social-link {
+    color:#fff;
+    background-position:center;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #e8e7e7;
+    text-align: center;
+    position:relative;
+    padding:15px;
+    width:64px;
+    height:64px;
+    background-color:transparent;
+    @include border-radius(100px);
+
+    &:after{
+      @include transition(all 300ms ease-in-out);
+      @include scale(0.1);
+      content: '';
+      background-color:#35464d;
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      z-index:-1;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+
+    &:hover:after{
+      @include scale(1);
+      opacity:1;
+    }
+
 }

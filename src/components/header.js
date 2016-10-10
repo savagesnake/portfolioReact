@@ -15,6 +15,11 @@ export default class Header extends Component{
           <h1>My name is Wolfgang A Criollo</h1>
           <h2>I'm a webdesigner & developer</h2>
           <p>portfolio under construction</p>
+          <div>
+          <a className="sprite sprite-linkedin-logo" href="https://www.linkedin.com/in/wolfgangamadeus
+" target="_target" alt="linkedin"></a>
+          </div>
+
           </div>
         </div>
       </div>

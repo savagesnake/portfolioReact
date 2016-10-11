@@ -22,9 +22,9 @@ export default class Nav extends Component{
                 </ul>
               </nav>
             </div>
-            <div className="nav-toggle">
-              <i className="fa fa-bars fa-lg" ref="toggleNav" onClick={this.navToggle.bind(this)}></i>
-            </div>
+        </div>
+        <div className="nav-toggle">
+        <i className="fa fa-bars fa-lg" ref="toggleNav" onClick={this.navToggle.bind(this)}></i>
         </div>
       </div>
     )

@@ -1,6 +1,6 @@
-$desktopBreak: 800px;
+$desktopBreak: 750px;
 $phoneBreak: 480px;
-$tablet: 800px;
+$tablet: 750px;
 
 @mixin desktop{
   @media only screen and (min-width:$desktopBreak){

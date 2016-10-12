@@ -6,7 +6,13 @@ html,body{
 *{
   box-sizing: border-box;
 }
-
+h3{
+  color: #25292d;
+  font-size: 21px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 0 0 10px;
+}
 ul{
   list-style-type: none;
   margin:0px;
@@ -25,4 +31,20 @@ ul{
   font-weight:200;
   line-height:30px;
   font-size:1.30em;
+}
+
+.dev-icon{
+    font-size: 1.56em;
+    margin-right:8px;
+}
+
+.content{
+  padding:40px;
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+.contain{
+  max-width:1400px;
+  margin: 0 auto;
 }

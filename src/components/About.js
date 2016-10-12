@@ -5,7 +5,9 @@ export default class About extends Component{
   render(){
     return(
         <div className="content">
-          <h1 className="page-title">About Me</h1>
+        <header>
+        <h2 className="page-title">About</h2>
+        </header>
           <div id="row" className="cell-1">
             <div className="lead">
             <img className="profilePic" src={profilePic} alt="profile-image" title="Wolfgang Criollo"/>

@@ -12,8 +12,8 @@ export default class Header extends Component{
         <div className="header-inner-wrap">
           <div className="header-content">
           <img  className="icon" src={iconLogo} alt="wolfgang Criollo"/>
-          <h1>My name is Wolfgang A Criollo</h1>
-          <h2>I'm a webdesigner & developer</h2>
+          <h1>Hello!, I'm Wolfgang</h1>
+          <h2>I'm a Web Designer & Developer</h2>
           <p>portfolio under construction</p>
           <ul className="inline-list">
           <li>

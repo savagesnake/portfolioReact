@@ -42,19 +42,24 @@ export default class Developer extends Component{
                     </div>
                     <div className="timeline-block">
                         <h3>Devbootcamp</h3>
-                        <p>text</p>
+                        <p>An immersive program with  HTML, CSS, Ruby, JavaScript, git and SQL. It also focuses on teaching meta-skills such as problem-solving approaches, pair programming, and giving and receiving feedback. approximate 65% pair programming, 25% group projects, and 10% individual work.</p>
                     </div>
                     <div className="timeline-block">
                         <h3>Webdugout an MSEDP division</h3>
-                        <p>text</p>
+                        <p>
+                        Work as a web designer in Webdugout a division of M.S.E.D.P, responsibilities included  Project management working closely with clients to achieve optimal results. Designed mock-up prototypes to fully present client the look and feel of the website, followed by working with an in-house developed C.M.S system to create the entire functional website. Using web  technologies (html, javascript,jquery,css)
+                        </p>
                     </div>
                     <div className="timeline-block">
                         <h3>Ketherine Gibbs</h3>
-                        <p>text</p>
+                        <p>Computer and Art Design courses Graphic Design for Print Media workshop Graphic Design workshop Workshop on Photoshop for Designers
+                        </p>
                     </div>
                     <div className="timeline-block">
                         <h3>Hight School</h3>
-                        <p>text</p>
+                        <p>
+                        Took an elective for Computer Repair Technician this  course focuses on computer repair and troubleshooting, build and repair personal computers 
+                        </p>
                     </div>
                </section>
                {/* <ul  className="book-list">

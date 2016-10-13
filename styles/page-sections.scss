@@ -39,13 +39,14 @@
   }
 }
 
-
+// Developer section
 .developer-bg{
   color:#fff;
   text-align:center;
-  background-color: #21283a;
+  background-color: #2a3545;
   // background: radial-gradient(circle farthest-corner at 100% 100%, #46b4cd, #275a73, #18314a);
-  background: radial-gradient(circle farthest-corner at 100% 100%, #3c3956, #232133, #14121d);
+  // background: radial-gradient(circle farthest-corner at 100% 100%, #3c3956, #232133, #14121d);
+  background: radial-gradient(circle farthest-corner at 100% 100%, #556a8a, #3a485d, #2a3545);
           .heading-panel-container{
       border-bottom: 1px solid rgba(255, 255, 255, 0.13);
     }
@@ -69,8 +70,81 @@
     vertical-align: top;
   }
   h3{
-    letter-spacing: 1;
+    letter-spacing: 1px;
     font-size: 1.30em;
     margin-bottom:10px;
+  }
+}
+
+.book-list{
+  li{
+    display:inline-block;
+    img{
+      max-width:140px;
+    }
+  }
+}
+
+// timeline
+#timeline{
+  position:relative;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.38);
+    width:4px;
+    height:100%;
+    left:18px;
+  }
+}
+
+.circle-bg,.pin-circle{
+  @include border-radius(50%);
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom:0px;
+
+}
+.pin{
+  &.top-pin{
+    padding-bottom:10px;
+  }
+  width:40px;
+  position: relative;
+  .circle-bg{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  .pin-circle{
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.timeline-block{
+  position: relative;
+  padding-left: 80px;
+  margin: 20px 0px;
+  p{
+    margin: 0px;
+  }
+  &:before{
+    content:'';
+    display: inline-block;
+    width:10px;
+    height:10px;
+    margin:auto;
+    position:absolute;
+    left:15px;
+    top:0;
+    bottom: 0;
+    background-color: #fff;
+    @include border-radius(50%);
   }
 }

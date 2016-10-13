@@ -19,7 +19,6 @@ export default class About extends Component{
                 </p>
             </div>
           </div>
-
         </div>
     )
   }

@@ -1,24 +1,26 @@
-$desktopBreak: 750px;
-$phoneBreak: 480px;
-$tablet: 750px;
+$desktop: 960px;
+$tablet: 680px;
+$phone: 340px;
+
 
 @mixin desktop{
-  @media only screen and (min-width:$desktopBreak){
-    @content
-  }
-};
-
-@mixin phone{
-  @media only screen and (max-width:$phoneBreak){
+  @media only screen and (min-width:$desktop){
     @content
   }
 };
 
 @mixin tablet{
-  @media only screen and (max-width:$tablet){
+  @media only screen and (min-width:$tablet){
     @content
   }
 };
+
+@mixin phone{
+  @media only screen and (min-width:$phone){
+    @content
+  }
+};
+
 
 @mixin transform($transform){
   -webkit-transform:$transform;

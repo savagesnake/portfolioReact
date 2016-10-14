@@ -6,6 +6,7 @@ import Developer from "./components/Developer";
 require('../styles/styles.js');
 require('normalize.css');
 require('font-awesome-webpack');
+
 export default class App extends Component{
   render(){
     return(

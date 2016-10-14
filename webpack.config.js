@@ -4,20 +4,19 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var srcPath = path.join(__dirname,"src");
 var builPath = path.join(__dirname,"/public");
 
-
 module.exports = {
-  devtool:"eval",
-  entry:path.join(srcPath,"index.js"),
-  // devtool:"inline-source-map",
-  // entry:[
-  //   'webpack-dev-server/client?http://127.0.0.1:8080/',
-  //   'webpack/hot/only-dev-server',
-  //   './src'
-  // ],
+  // devtool:"eval",
+  // entry:path.join(srcPath,"index.js"),
+  devtool:"inline-source-map",
+  entry:[
+    'webpack-dev-server/client?http://127.0.0.1:8080/',
+    'webpack/hot/only-dev-server',
+    './src'
+  ],
   output:{
     path:builPath,
-    filename:'./src/bundle.js'
-    // publicPath:'/public/'
+    filename:'./src/bundle.js',
+    publicPath:'/public/'
   },
   resolve:{
     moduleDirectories:['node_modules','src'],
@@ -38,7 +37,9 @@ module.exports = {
     },
     { test: /\.(jpg|png)$/, loader: 'file-loader' },
     { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
-    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
+    { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"
+    }
+
   ]
   },
   tyles: {

@@ -1,5 +1,4 @@
-
-#row{
+.row{
   &:after{
     content: '';
     clear: both;
@@ -8,20 +7,40 @@
   margin-bottom:15px;
 }
 
+// grid size
+$max: 12;
+
+.row > div{
+  padding:8px;
+  float: left;
+}
 
 @include desktop{
-  #row > div{
-    float: left;
-  }
-
-  // grid size
-  $max: 12;
-
   @for $i from 1 through $max{
-    $equ: 100% / $i;
-      #row.cell-#{$i} > div{
+    $equ: (100% / $max) * $i;
+      .row .col-wd-#{$i}{
         width:$equ;
-      }
+    }
+    // end of loop
+  }
+// end of include desktop
+}
+@include tablet{
+  @for $i from 1 through $max{
+    $equ: (100% / $max) * $i;
+      .row .col-md-#{$i}{
+        width:$equ;
+    }
+    // end of loop
+  }
+// end of include desktop
+}
+@include phone{
+  @for $i from 1 through $max{
+    $equ: (100% / $max) * $i;
+      .row .col-sm-#{$i}{
+        width:$equ;
+    }
     // end of loop
   }
 // end of include desktop

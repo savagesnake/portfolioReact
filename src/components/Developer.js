@@ -15,8 +15,8 @@ export default class Developer extends Component{
           </header>
         <div className="content">
           <article className="tool-box">
-            <div id="row" className="cell-2">
-              <div >
+            <div className="row">
+              <div className="col-wd-4 col-md-5">
                 <h3>Web Development Toolbox</h3>
                 <ul>
                 <li><i className="dev-icon devicon-html5-plain"></i> <span>HTML</span></li>
@@ -33,7 +33,7 @@ export default class Developer extends Component{
                   <li><i className="dev-icon devicon-photoshop-plain"></i> Photoshop</li>
                 </ul>
               </div>
-              <div>
+              <div className="col-wd-8 col-md-7">
                <h3>Experience</h3>
                <section id="timeline">
                     <div className="pin top-pin">
@@ -58,19 +58,11 @@ export default class Developer extends Component{
                     <div className="timeline-block">
                         <h3>Hight School</h3>
                         <p>
-                        Took an elective for Computer Repair Technician this  course focuses on computer repair and troubleshooting, build and repair personal computers 
+                        Took an elective for Computer Repair Technician this  course focuses on computer repair and troubleshooting, build and repair personal computers
                         </p>
                     </div>
                </section>
-               {/* <ul  className="book-list">
-                 <li><img src={bookHTML5}/></li>
-                 <li><img src={bookCSS3}/></li>
-                 <li><img src={bookJavascriptJquery}/></li>
-                 <li><img src={bookJavascript}/></li>
-                 <li><img src={bookRuby}/></li>
-               </ul> */}
               </div>
-              <div></div>
             </div>
           </article>
         </div>

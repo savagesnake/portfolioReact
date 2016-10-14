@@ -11,9 +11,9 @@ export default class Nav extends Component{
   render(){
     return(
       <div id="top-bar">
-        <div id="row" className='cell-2'>
-            <div >Wolfgang A Criollo</div>
-            <div className="nav-wrap">
+        <div className="row">
+            <div  className="col-wd-6">Wolfgang A Criollo</div>
+            <div className="nav-wrap col-wd-6">
               <nav id="nav" ref="mobileNav">
                 <ul>
                   <li>About</li>

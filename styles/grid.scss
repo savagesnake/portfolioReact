@@ -15,16 +15,17 @@ $max: 12;
   float: left;
 }
 
-@include desktop{
+@include phone{
   @for $i from 1 through $max{
     $equ: (100% / $max) * $i;
-      .row .col-wd-#{$i}{
-        width:$equ;
+    .row .col-sm-#{$i}{
+      width:$equ;
     }
     // end of loop
   }
-// end of include desktop
+  // end of include desktop
 }
+
 @include tablet{
   @for $i from 1 through $max{
     $equ: (100% / $max) * $i;
@@ -35,13 +36,14 @@ $max: 12;
   }
 // end of include desktop
 }
-@include phone{
+
+@include desktop{
   @for $i from 1 through $max{
     $equ: (100% / $max) * $i;
-      .row .col-sm-#{$i}{
-        width:$equ;
+    .row .col-wd-#{$i}{
+      width:$equ;
     }
     // end of loop
   }
-// end of include desktop
+  // end of include desktop
 }

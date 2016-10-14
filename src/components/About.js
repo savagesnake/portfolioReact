@@ -4,7 +4,7 @@ let  profilePic = require("../../public/images/profileImage.jpg")
 export default class About extends Component{
   render(){
     return(
-        <div className="content">
+        <div className="contain content">
         <header>
         <h2 className="page-title">About</h2>
         </header>

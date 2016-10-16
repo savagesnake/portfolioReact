@@ -11,15 +11,15 @@ export default class App extends Component{
   render(){
     return(
       <div id="main">
-        <header id="section-home">
+        <header id="home">
           <Nav />
           <Header />
         </header>
-        <section id="section-about">
+        <section id="about">
           <About />
         </section>
-        <section>
-          <Developer />
+        <section id="developer">
+          <Developer  />
         </section>
       </div>
     );

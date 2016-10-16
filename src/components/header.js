@@ -28,7 +28,9 @@ export default class Header extends Component{
           </li>
           </ul>
           </div>
-          <i id="scroll-arrow" className="fa fa-angle-down fa-3x"></i>
+          <div className="smoothScroll">
+          <a href="#about" id="scroll-arrow" className="fa fa-angle-down fa-3x"></a>
+          </div>
         </div>
       </div>
     )

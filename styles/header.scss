@@ -2,48 +2,108 @@
   z-index:999;
   color:$white;
   padding:1.5em;
-  position:absolute;
+  position:fixed;
   left:0;
   right:0;
   top:0;
+  @include transition(background 300ms ease-in-out);
+  @include transition(padding 300ms ease-in-out);
+  .row{
+      margin:0px;
+  }
 }
-#nav{
-  display:none;
+
+.logo{
+  font-size:.8em;
+  margin:0px;
+  display: inline;
 }
 
 .nav-toggle{
-  display:block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
+  display:inline;
+  float: right;
+    cursor: pointer;
 }
 
-@include desktop {
-
-  .nav-toggle{
-    display:none;
-  }
-
-  #nav{
-    display:block!important;
-  }
-  //navigation
-  #top-bar{
-    text-align: left;
-  }
-
-  .nav-wrap{
-    text-align: right;
-  }
-
-  #nav{
+#nav{
+    position: fixed;
+    display: none;
+    left:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    background-color:rgba(12, 12, 18, 0.95);
     li {
-      display:inline-block;
-      padding-left:.8em;
+      border-bottom:1px solid #999;
+        a{
+          padding:1em;
+          color:#fff;
+          display: block;
+          text-transform: uppercase;
+          text-decoration:none;
+        }
     }
   }
-}
+
+  @include tablet{
+    #nav{
+      width:50%;
+    }
+  }
+  @include desktop{
+    #nav{
+      position:static;
+      background-color:transparent;
+      width:100%;
+      display: block!important;
+      li{
+        display: inline-block;
+        border:0px;
+        a{
+          padding:0 0 0 .8em;
+        }
+      }
+    }
+    .nav-toggle{
+      display: none;
+    }
+    .nav-wrap{
+      text-align:right;
+    }
+  }
+
+//
+// @include desktop {
+//   #nav{
+//     display:none;
+//     a{
+//       text-decoration: none;
+//       text-transform: uppercase;
+//       color:#fff;
+//     }
+//   }
+// }
+
+//
+// @include desktop {
+//
+//   .nav-toggle{
+//     display:none;
+//   }
+//
+//   #nav{
+//     display:block!important;
+//   }
+//   //navigation
+//   #top-bar{
+//     text-align: left;
+//   }
+//
+//   .nav-wrap{
+//     text-align: right;
+//   }
+//
+// }
 
 //fillter, background-image for header
 .header-wrap{

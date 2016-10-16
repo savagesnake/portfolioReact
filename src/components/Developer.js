@@ -56,7 +56,7 @@ export default class Developer extends Component{
                         </p></div>
                     </div>
                     <div className="timeline-block">
-                        <div className="timeline-content"><h3>Hight School</h3>
+                        <div className="timeline-content"><h3>High School</h3>
                         <p>
                         Took an elective for Computer Repair Technician this  course focuses on computer repair and troubleshooting, build and repair personal computers
                         </p></div>

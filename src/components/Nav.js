@@ -3,8 +3,14 @@ var $ = require('jquery')
 
 export default class Nav extends Component{
   navToggle(){
-    let nav = this.refs.smoothScroll;
-    $(nav).toggle();
+    let nav = this.refs.nav;
+    let posLeft = $(nav).position().left;
+      console.log(posLeft);
+    if(posLeft < 0){
+      $(nav).css({left:0});
+    }else{
+      $(nav).removeAttr("style");
+    }
   }
 
   componentDidMount(){
@@ -12,19 +18,16 @@ export default class Nav extends Component{
     var $downArrow = $(".smoothScroll");
     var $topBar = $("#top-bar");
     var topBarHeight = $topBar.outerHeight();
-
       function smoothScroll(nav){
         $(nav).on("click",function(e){
           e.preventDefault();
           var $target = e.target;
           var scrollTo = $($target).attr('href');
           $('html,body').animate({
-            scrollTop: $(scrollTo).offset().top,
+            scrollTop: $(scrollTo).offset().top
           },1000);
         });
       }
-      smoothScroll(nav);
-      smoothScroll($downArrow);
 
       $(window).scroll(function(){
         var positionY = $(this).scrollTop();
@@ -32,10 +35,11 @@ export default class Nav extends Component{
           $topBar.css({backgroundColor:"#14141b",padding:"10px 24px"});
         }else(
           $topBar.removeAttr("style")
-        )
+        );
       });
 
-
+      smoothScroll(nav);
+      smoothScroll($downArrow);
 
   }
   render(){
@@ -49,11 +53,10 @@ export default class Nav extends Component{
               </div>
             </div>
             <div className="nav-wrap col-sm-12 col-md-12 col-wd-6">
-              <nav id="nav" ref="smoothScroll">
-                <ul>
+              <nav id="nav" ref="nav">
+                <ul ref="smoothScroll">
                   <li><a href="#about">About</a></li>
                   <li><a href="#developer">Resume</a></li>
-                  {/* <li>Contact</li> */}
                 </ul>
               </nav>
             </div>

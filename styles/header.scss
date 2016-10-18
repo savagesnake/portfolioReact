@@ -27,12 +27,15 @@
 
 #nav{
     position: fixed;
-    display: none;
-    left:0;
+    left:-100%;
     top:0;
     bottom:0;
-    width:100%;
-    background-color:rgba(12, 12, 18, 0.95);
+    width: 100%;
+    background-color:#101017;
+    @include transition(left 300ms ease-in-out);
+    ul{
+      display: inline;
+    }
     li {
       border-bottom:1px solid #999;
         a{
@@ -47,7 +50,7 @@
 
   @include tablet{
     #nav{
-      width:50%;
+      max-width:300px;
     }
   }
   @include desktop{
@@ -55,7 +58,6 @@
       position:static;
       background-color:transparent;
       width:100%;
-      display: block!important;
       li{
         display: inline-block;
         border:0px;
@@ -71,39 +73,6 @@
       text-align:right;
     }
   }
-
-//
-// @include desktop {
-//   #nav{
-//     display:none;
-//     a{
-//       text-decoration: none;
-//       text-transform: uppercase;
-//       color:#fff;
-//     }
-//   }
-// }
-
-//
-// @include desktop {
-//
-//   .nav-toggle{
-//     display:none;
-//   }
-//
-//   #nav{
-//     display:block!important;
-//   }
-//   //navigation
-//   #top-bar{
-//     text-align: left;
-//   }
-//
-//   .nav-wrap{
-//     text-align: right;
-//   }
-//
-// }
 
 //fillter, background-image for header
 .header-wrap{

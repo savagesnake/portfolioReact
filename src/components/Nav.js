@@ -5,7 +5,6 @@ export default class Nav extends Component{
   navToggle(){
     let nav = this.refs.nav;
     let posLeft = $(nav).position().left;
-      console.log(posLeft);
     if(posLeft < 0){
       $(nav).css({left:0});
     }else{
@@ -18,6 +17,7 @@ export default class Nav extends Component{
     var $downArrow = $(".smoothScroll");
     var $topBar = $("#top-bar");
     var topBarHeight = $topBar.outerHeight();
+
       function smoothScroll(nav){
         $(nav).on("click",function(e){
           e.preventDefault();
@@ -47,16 +47,17 @@ export default class Nav extends Component{
       <div id="top-bar">
         <div className="row">
             <div  className="col-sm-12 col-md-12 col-wd-6">
-              <h1 className="logo"> Wolfgang A Criollo</h1>
+              <h1 className="logo smoothScroll"><a  href="#home">Wolfgang A Criollo</a></h1>
               <div className="nav-toggle">
               <i className="fa fa-bars fa-lg" ref="toggleNav" onClick={this.navToggle.bind(this)}></i>
               </div>
             </div>
             <div className="nav-wrap col-sm-12 col-md-12 col-wd-6">
               <nav id="nav" ref="nav">
+                <div className="close-side"><i className="fa fa-times-circle fa-lg " ref="toggleNav" onClick={this.navToggle.bind(this)}></i></div>
                 <ul ref="smoothScroll">
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#developer">Resume</a></li>
+                  <li><a href="#about"><i className="fa fa-code-fork side-nav-icon"></i> About</a></li>
+                  <li><a href="#developer"><i className="fa fa-code side-nav-icon"></i> Resume</a></li>
                 </ul>
               </nav>
             </div>

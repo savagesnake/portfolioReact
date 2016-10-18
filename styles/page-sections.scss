@@ -63,8 +63,14 @@
     color:#fff;
   }
   li {
+    display: inline-block;
     padding-left:15px;
     margin-bottom:18px;
+  }
+  @include tablet{
+    li {
+      display:block;
+    }
   }
   li span{
     line-height:25px;
@@ -76,6 +82,7 @@
     margin-bottom:10px;
   }
 }
+
 
 .book-list{
   li{
@@ -171,8 +178,17 @@
   right: 0;
   top: 0;
   bottom:0px;
-
 }
+.circle-bg{
+    animation:pulse 3s infinite ease-in-out;
+}
+
+  @keyframes pulse{
+    0%{opacity:.5;}
+    50%{opacity:1;}
+    100%{opacity:.5;}
+  }
+
 .pin{
   &.top-pin{
     padding-bottom:10px;
@@ -186,8 +202,8 @@
   }
   .pin-circle{
     background-color: #fff;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
   @include desktop{
       margin:0 auto;

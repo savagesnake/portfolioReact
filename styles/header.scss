@@ -17,6 +17,9 @@
   font-size:.8em;
   margin:0px;
   display: inline;
+  a{
+    color:#fff;
+  }
 }
 
 .nav-toggle{
@@ -31,26 +34,57 @@
     top:0;
     bottom:0;
     width: 100%;
-    background-color:#101017;
-    @include transition(left 300ms ease-in-out);
+    background-color:#18161d;
+    @include transition(left 600ms ease-in-out);
     ul{
       display: inline;
     }
     li {
-      border-bottom:1px solid #999;
-        a{
-          padding:1em;
-          color:#fff;
-          display: block;
-          text-transform: uppercase;
-          text-decoration:none;
-        }
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #201e25;
+      &:last-child{
+        border-bottom:0px;
+      }
+      &:first-child{
+        border-top:0px;
+      }
+      a{
+        padding:1em;
+        color:#fff;
+        display: block;
+        text-transform: uppercase;
+        text-decoration:none;
+          &:hover{
+            background-color:rgb(29, 27, 33);
+          }
+          @include desktop{
+            &:hover{
+              background-color:transparent;
+            }
+          }
+      }
     }
   }
+.side-nav-icon{
+  color:#e28634;
+}
+
+.close-side {
+    text-align: right;
+    background-color: rgb(193, 56, 56);
+    .fa{
+      cursor: pointer;
+      background-color: #a52222;
+      padding: 10px;
+    }
+    @include desktop{
+      display: none;
+    }
+}
 
   @include tablet{
-    #nav{
-      max-width:300px;
+      #nav{
+      max-width:34%;
     }
   }
   @include desktop{
@@ -58,6 +92,7 @@
       position:static;
       background-color:transparent;
       width:100%;
+      display: inline;
       li{
         display: inline-block;
         border:0px;
@@ -93,10 +128,8 @@
         bottom:20px;
         color:#cecece;
         display: inline-block;
-        -webkit-animation-name:floating;
-        -webkit-animation-duration:3s;
-        -webkit-animation-iteration-count:infinite;
-        -webkit-animation-timing-function:ease-in-out;
+        -webkit-animation:floating 3s infinite ease-in-out;
+        margin-left: -15px;
         @-webkit-keyframes floating{
           from{-webkit-transform:translate(0, 0px);}
           50%{-webkit-transform:translate(0, 10px);}

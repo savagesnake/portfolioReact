@@ -13,11 +13,11 @@ export default class About extends Component{
               <div className="lead">
               <img className="profilePic" src={profilePic} alt="profile-image" title="Wolfgang Criollo"/>
                   <p>
-                  I'm a determined individual  that loves developing websites.
-                  I self-thought myself most of  the many skills I have and have improved those skills by attending to college and other tech schools.
-                  after many years I have found my real passion in front-end development at the moment I'm focusing  strengthening my skills on the many different frameworks that are out there,
-                  currently  looking for opportunities to work at a place that will allow my skill to grow, I'm always looking to challenge myself.
+                  I'm a determined individual that loves developing websites.<br/>
+I self-taught most of the my many skills and improved them by attending to college and other tech schools.
                   </p>
+                  <p>Have worked as a web designer for 3yrs during this years I have found my real passion in front-end development at the moment I'm focusing strengthening my skills on the many different frameworks that are out there.</p>
+                  <p>currently looking for opportunities to work at a place that is centered around working as a team and that allows everyone’s talents to flourish,I find that I work best in an environment that is empowering and positive.</p>
               </div>
             </div>
           </div>

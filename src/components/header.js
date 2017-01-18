@@ -14,7 +14,6 @@ export default class Header extends Component{
           <img  className="icon" src={iconLogo} alt="wolfgang Criollo"/>
           <h1>Hello!, I'm Wolfgang</h1>
           <h2>I'm a Web Designer & Developer</h2>
-          <p>portfolio under construction</p>
           <ul className="inline-list">
           <li>
             <a href="https://github.com/savagesnake" target="_target" alt="github">

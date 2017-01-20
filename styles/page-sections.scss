@@ -5,9 +5,16 @@
 }
 
 .heading-panel-container{
+    position:relative;
+    z-index:999;
     padding:20px 0px;
     margin-bottom:40px;
+    &.small{
+      padding:0px;
+      margin-bottom:0px;
+    }
     .page-title{
+      padding-top: 70px;
       margin:20px 0px 10px 0px;
     }
     p{
@@ -29,13 +36,13 @@
 }
 
 @include desktop{
-  .page-title{
-    text-align: left;
-  }
   .profilePic{
   float:right;
   display: inline;
   margin-left: 40px;
+  }
+  #about .page-title{
+    text-align:left;
   }
 }
 
@@ -52,7 +59,6 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.13);
     }
   .page-title{
-    text-align: center;
     color:#fff;
   }
 }
@@ -208,4 +214,17 @@
   @include desktop{
       margin:0 auto;
   }
+}
+
+
+// Resume section
+#resume{
+  position:relative;
+  .heading-panel-container{
+    background-color:$white;
+  }
+}
+
+.codepen-link{
+  letter-spacing: 3px;
 }

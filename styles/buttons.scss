@@ -1,0 +1,18 @@
+.btn{
+  display: inline-block;
+  padding:10px;
+  background-color:#ccc;
+  color:#000;
+  font-size:1.2em;
+  &.md{
+    font-size:1.4em;
+    padding:15px;
+  }
+  &.round{
+    @include border-radius(5px);
+  }
+  &.green{
+    color:#fff;
+    background-color: #0f171b;
+  }
+}

@@ -57,7 +57,8 @@ export default class Nav extends Component{
                 <div className="close-side"><i className="fa fa-times-circle fa-lg " ref="toggleNav" onClick={this.navToggle.bind(this)}></i></div>
                 <ul ref="smoothScroll">
                   <li><a href="#about"><i className="fa fa-code-fork side-nav-icon"></i> About</a></li>
-                  <li><a href="#developer"><i className="fa fa-code side-nav-icon"></i> Resume</a></li>
+                  <li><a href="#developer"><i className="fa fa-code side-nav-icon"></i> Track Record</a></li>
+                  <li><a href="#resume"><i className="fa fa-code side-nav-icon"></i> Resume</a></li>
                 </ul>
               </nav>
             </div>

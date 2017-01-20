@@ -219,12 +219,37 @@
 
 // Resume section
 #resume{
+  background-color:#303133;//#202525;
   position:relative;
   .heading-panel-container{
+    box-shadow:0px 0px 50px rgba(0,0,0,.4);
     background-color:$white;
+  }
+  .content{
+      color:#eee;
   }
 }
 
 .codepen-link{
   letter-spacing: 3px;
+}
+
+.user-card{
+  @include border-radius(5px);
+  border:1px solid #272727;
+  padding:20px;
+  margin-bottom: 20px;
+  background-color:#2b2c2e;
+  .card-id{
+    &:after{
+      @include clearFloat();
+      }
+    }
+  .card-image{
+      width:100px;
+      height:100px;
+      margin-right:20px;
+      float:left;
+      @include border-radius(200px);
+  }
 }

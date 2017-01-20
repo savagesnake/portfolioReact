@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-let  profilePic = require("../../public/images/profileImage.jpg")
+let  profilePic = require("../../public/images/profileImage.jpg");
 
 export default class About extends Component{
   render(){

@@ -50,3 +50,9 @@ $phone: 340px;
 @mixin scale($value){
   @include transform(scale(#{$value}));
 }
+
+@mixin clearFloat(){
+  content:'';
+  display:block;
+  clear:both;
+}

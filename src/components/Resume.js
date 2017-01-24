@@ -1,0 +1,50 @@
+import React,{Component} from 'react';
+let  profilePic = require("../../public/images/profileImage.jpg");
+
+
+export default class Resume extends Component{
+  render(){
+    return(
+      <div>
+        <header className="heading-panel-container">
+            <h2 className="page-title">Resume</h2>
+            <p>Flexitarian pork belly banh mi ethical, retro chartreuse hammock franzen locavore irony food truck kickstarter lo-fi shabby chic</p>
+        </header>
+        <div className="content">
+          <article className="resume-panel">
+            <div className="row">
+              <div className="col-sm-12 col-md-12 col-wd-4">
+                <article className="user-card">
+                  <div className="card-id">
+                    <img className="card-image" src={profilePic}/> <p>Wolfgang Criollo<br/>
+                      Fullstack Developer</p>
+                  </div>
+                  <div className="card-info">
+                    <p>I'm a determined individual that loves developing websites.<br/>
+                    self-taught most of the my many skills and improved them by attending to college and other tech schools.</p><p>
+                        While working as a web designer for 3yrs I have found my real passion in front-end development at the moment I'm focusing strengthening my skills on the many different frameworks that are out there.
+                      </p><p>
+                        currently looking for opportunities to work at a place that is centered around working as a team and that allows everyone’s talents to flourish, I find that I work best in an environment that is empowering and positive.</p>
+                      </div>
+                    </article>
+
+                  </div>
+                  <div className="col-sm-12 col-md-12 col-wd-4">
+                    <div className='image-holder'>
+                      image placeholder
+                    </div>
+                  </div>
+                  <div className="col-sm-12  col-md-12 col-wd-4">
+                    <article className="code-networks">
+                      <a className="btn md green round codepen-link" href="https://codepen.io/savagesnake/" target="_blank">VIEW C<i className="fa fa-codepen">DEPEN</i></a>
+                      <img src="https://www.codewars.com/users/savagesnake/badges/large"/>
+                    </article>
+                  </div>
+                </div>
+              </article>
+        </div>
+
+    </div>
+    );
+  }
+}

@@ -1,11 +1,11 @@
 import React,{Component} from "react";
-let  profilePic = require("../../public/images/profileImage.jpg")
+let  profilePic = require("../../public/images/profileImage.jpg");
 
 export default class About extends Component{
   render(){
     return(
         <div className="contain content">
-        <header>
+        <header className="heading-panel-container small">
         <h2 className="page-title">About</h2>
         </header>
           <div className="row" >

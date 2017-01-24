@@ -1,9 +1,4 @@
 import React,{Component} from 'react';
-// let  bookJavascript = require("../../public/images/headFirstJavascript.jpg")
-// let  bookRuby = require("../../public/images/headFirstRuby.jpg")
-// let  bookHTML5 = require("../../public/images/missingHtml5.jpg")
-// let  bookJavascriptJquery = require("../../public/images/missingJavascriptJquery.jpg")
-// let  bookCSS3 = require("../../public/images/missingCss3.jpg")
 export default class Developer extends Component{
   render(){
     return(
@@ -34,7 +29,7 @@ export default class Developer extends Component{
                 </ul>
               </div>
               <div className="col-sm-12 col-md-5 col-wd-9">
-               <h3 className="timeline-title">Experience</h3>
+               <h3 className="timeline-title">Track Record</h3>
                <section id="timeline">
                     <div className="pin top-pin">
                       <span className="circle-bg"></span>

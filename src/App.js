@@ -16,9 +16,9 @@ export default class App extends Component{
           <Nav />
           <Header />
         </header>
-        <section id="about">
+        {/* <section id="about">
           <About />
-        </section>
+        </section> */}
         <section id="developer">
           <Developer  />
         </section>

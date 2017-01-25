@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-var iconLogo = require("../../public/images/wolfgangIcon.png");
+var iconLogo = require("../../public/images/signature-logo.png");
 import headerHeight from '../scripts/header.js';
 
 export default class Header extends Component{
@@ -28,7 +28,7 @@ export default class Header extends Component{
           </ul>
           </div>
           <div className="smoothScroll">
-          <a href="#about" id="scroll-arrow" className="fa fa-angle-down fa-3x"></a>
+          <a href="#developer" id="scroll-arrow" className="fa fa-angle-down fa-3x"></a>
           </div>
         </div>
       </div>

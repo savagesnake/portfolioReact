@@ -14,7 +14,7 @@
       margin-bottom:0px;
     }
     .page-title{
-      padding-top: 70px;
+      padding-top: 40px;
       margin:20px 0px 10px 0px;
     }
     p{
@@ -47,10 +47,29 @@
 }
 
 // Developer section
+#developer{
+  position: relative;
+  h3{
+    color:#fff;
+  }
+  &:after{
+    content: '';
+    display:block;
+    position:absolute;
+    background-color:$resumeBg;
+    left:0;
+    right:0;
+    bottom:0;
+    height:5%;
+    transform-origin: 100%;
+    transform:skewY(-2deg);
+    }
+}
 .developer-bg{
+  padding-bottom:100px;
   color:#fff;
   text-align:center;
-  background-color: #2a3545;
+  background-color:$developerBg;
   // background: radial-gradient(circle farthest-corner at 100% 100%, #46b4cd, #275a73, #18314a);
   // background: radial-gradient(circle farthest-corner at 100% 100%, #3c3956, #232133, #14121d);
   // background: radial-gradient(circle farthest-corner at 100% 100%, #556a8a, #3a485d, #2a3545);
@@ -61,13 +80,12 @@
   .page-title{
     color:#fff;
   }
+
+
 }
 
-.tool-box{
+.track-record{
   text-align: left;
-  h3 {
-    color:#fff;
-  }
   li {
     display: inline-block;
     padding-left:15px;
@@ -90,16 +108,6 @@
 }
 
 
-.book-list{
-  li{
-    display:inline-block;
-    img{
-      max-width:140px;
-    }
-  }
-}
-
-
 @include desktop{
   .timeline-title{
     text-align: center;;
@@ -108,6 +116,8 @@
 // timeline
 #timeline{
   position:relative;
+  max-width: 80%;
+  margin:0 auto;
   &:before{
     content: '';
     position: absolute;
@@ -123,7 +133,7 @@
       margin:auto;
     }
     .timeline-block{
-      padding:0px;
+      padding:30px;
     }
     .timeline-block:nth-child(even){
        text-align:right;
@@ -219,14 +229,56 @@
 
 // Resume section
 #resume{
-  background-color:#303133;//#202525;
+  background-color:$resumeBg;//#303133;//#202525;
   position:relative;
-  .heading-panel-container{
-    box-shadow:0px 0px 50px rgba(0,0,0,.4);
-    background-color:$white;
-  }
+  overflow:hidden;
   .content{
-      color:#eee;
+      color:#242424;
+  }
+  .heading-panel-container{
+  background-color:$resumeBg;
+  }
+}
+
+.tool-box{
+  text-align: left;
+  color:#5a5a6d;
+  li {
+    display: inline-block;
+    padding-left:15px;
+    margin-bottom:18px;
+  }
+  @include tablet{
+    li {
+      display:block;
+    }
+  }
+  li span{
+    line-height:25px;
+    vertical-align: top;
+  }
+   h3{
+    color:#1d1d26;
+    letter-spacing: 1px;
+    font-size: 1.30em;
+    margin-bottom:10px;
+  }
+}
+.resume-wrap{
+  text-align:center;
+  #resume-img{
+    @include border-radius(5px);
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #ccc;
+    transform-origin: center;
+    transform: rotate(5deg);
+    position: relative;
+    left: -70px;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+    // top: 0;
   }
 }
 
@@ -236,10 +288,11 @@
 
 .user-card{
   @include border-radius(5px);
-  border:1px solid #272727;
+  // border:1px solid #272727;
   padding:20px;
   margin-bottom: 20px;
   background-color:#2b2c2e;
+  color:$white;
   .card-id{
     &:after{
       @include clearFloat();

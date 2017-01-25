@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 let  profilePic = require("../../public/images/profileImage.jpg");
-
+let resumeImg = require('../../public/images/resume-image.png');
 
 export default class Resume extends Component{
   render(){
@@ -33,12 +33,14 @@ export default class Resume extends Component{
                 </article>
                   </div>
                   <div className="col-sm-12 col-md-12 col-wd-6">
-                    <div className='image-holder'>
-                      image placeholder
+                    <div className="resume-wrap">
+                      <img id="resume-img" src={resumeImg}/>
                     </div>
                   </div>
                   <div className="col-sm-12  col-md-12 col-wd-3">
+                    <img src="https://www.codewars.com/users/savagesnake/badges/micro"/>
                     <article className="user-card">
+
                       <div className="card-id">
                         <img className="card-image" src={profilePic}/> <p>Wolfgang Criollo<br/>
                           Fullstack Developer</p>
@@ -54,13 +56,10 @@ export default class Resume extends Component{
                         currently looking for opportunities to work at a place that is centered around working as a team and that allows everyone’s talents to flourish, I find that I work best in an environment that is empowering and positive.</p>
                       </div>
                       </article>
+                      <div className="code-networks">
+                        <a className="btn md dark-gray round codepen-link" href="https://codepen.io/savagesnake/" target="_blank">VIEW C<i className="fa fa-codepen">DEPEN</i></a>
+                      </div>
                     </div>
-                </div>
-              </article>
-              <article className="contain content">
-                <div className="code-networks">
-                  <a className="btn md green round codepen-link" href="https://codepen.io/savagesnake/" target="_blank">VIEW C<i className="fa fa-codepen">DEPEN</i></a>
-                  <img src="https://www.codewars.com/users/savagesnake/badges/large"/>
                 </div>
               </article>
         </div>

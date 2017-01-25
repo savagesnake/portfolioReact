@@ -1,3 +1,13 @@
+.image-holder {
+  background-color: #fff;
+  border-radius: 5px;
+  top: 20px;
+  height: 600px;
+  width: 720px;
+  margin: auto;
+  right: 0;
+  left: 0; }
+
 html, body {
   height: 100%;
   color: #484848;
@@ -35,12 +45,45 @@ ul {
   margin-right: 8px; }
 
 .content {
-  padding: 70px 20px;
+  padding: 20px;
   margin: 0 auto; }
 
 .contain {
   max-width: 1400px;
   margin: 0 auto; }
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ccc;
+  color: #000;
+  font-size: 1.2em;
+  margin-bottom: 20px; }
+  .btn.md {
+    font-size: 1.4em;
+    padding: 15px; }
+  .btn.round {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+  .btn.green {
+    color: #fff;
+    background-color: #21b949;
+    background: #b4ef47;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b4ef47 0%, #9bf948 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b4ef47 0%, #9bf948 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b4ef47 0%, #9bf948 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ef47', endColorstr='#9bf948',GradientType=0 );
+    /* IE6-9 */ }
+  .btn.dark-gray {
+    color: #fff;
+    background-color: #0f171b; }
 
 .row {
   margin-bottom: 15px; }
@@ -132,7 +175,7 @@ ul {
     width: 100%; } }
 
 #top-bar {
-  z-index: 999;
+  z-index: 9999;
   color: #fff;
   padding: 1.5em;
   position: fixed;
@@ -169,7 +212,7 @@ ul {
   left: -100%;
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 70%;
   background-color: #18161d;
   -webkit-transition: left 600ms ease-in-out;
   -moz-transition: left 600ms ease-in-out;
@@ -331,9 +374,15 @@ ul {
   text-align: center; }
 
 .heading-panel-container {
+  position: relative;
+  z-index: 999;
   padding: 20px 0px;
   margin-bottom: 40px; }
+  .heading-panel-container.small {
+    padding: 0px;
+    margin-bottom: 0px; }
   .heading-panel-container .page-title {
+    padding-top: 40px;
     margin: 20px 0px 10px 0px; }
   .heading-panel-container p {
     line-height: 29px;
@@ -349,14 +398,30 @@ ul {
   display: block; }
 
 @media only screen and (min-width: 960px) {
-  .page-title {
-    text-align: left; }
   .profilePic {
     float: right;
     display: inline;
-    margin-left: 40px; } }
+    margin-left: 40px; }
+  #about .page-title {
+    text-align: left; } }
+
+#developer {
+  position: relative; }
+  #developer h3 {
+    color: #fff; }
+  #developer:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5%;
+    transform-origin: 100%;
+    transform: skewY(-2deg); }
 
 .developer-bg {
+  padding-bottom: 100px;
   color: #fff;
   text-align: center;
   background-color: #2a3545;
@@ -364,39 +429,33 @@ ul {
   .developer-bg .heading-panel-container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.13); }
   .developer-bg .page-title {
-    text-align: center;
     color: #fff; }
 
-.tool-box {
+.track-record {
   text-align: left; }
-  .tool-box h3 {
-    color: #fff; }
-  .tool-box li {
+  .track-record li {
     display: inline-block;
     padding-left: 15px;
     margin-bottom: 18px; }
   @media only screen and (min-width: 680px) {
-    .tool-box li {
+    .track-record li {
       display: block; } }
-  .tool-box li span {
+  .track-record li span {
     line-height: 25px;
     vertical-align: top; }
-  .tool-box h3 {
+  .track-record h3 {
     letter-spacing: 1px;
     font-size: 1.30em;
     margin-bottom: 10px; }
-
-.book-list li {
-  display: inline-block; }
-  .book-list li img {
-    max-width: 140px; }
 
 @media only screen and (min-width: 960px) {
   .timeline-title {
     text-align: center; } }
 
 #timeline {
-  position: relative; }
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto; }
   #timeline:before {
     content: '';
     position: absolute;
@@ -410,7 +469,7 @@ ul {
       right: 0;
       margin: auto; }
     #timeline .timeline-block {
-      padding: 0px; }
+      padding: 30px; }
     #timeline .timeline-block:nth-child(even) {
       text-align: right; }
     #timeline .timeline-block:nth-child(odd) .timeline-content {
@@ -491,5 +550,76 @@ ul {
   @media only screen and (min-width: 960px) {
     .pin {
       margin: 0 auto; } }
+
+#resume {
+  position: relative;
+  overflow: hidden; }
+  #resume .content {
+    color: #242424; }
+  #resume .heading-panel-container {
+    background-color: #fff; }
+
+.tool-box {
+  text-align: left;
+  color: #5a5a6d; }
+  .tool-box li {
+    display: inline-block;
+    padding-left: 15px;
+    margin-bottom: 18px; }
+  @media only screen and (min-width: 680px) {
+    .tool-box li {
+      display: block; } }
+  .tool-box li span {
+    line-height: 25px;
+    vertical-align: top; }
+  .tool-box h3 {
+    color: #1d1d26;
+    letter-spacing: 1px;
+    font-size: 1.30em;
+    margin-bottom: 10px; }
+
+.resume-wrap {
+  text-align: center; }
+  .resume-wrap #resume-img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px #ccc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0; }
+
+.codepen-link {
+  letter-spacing: 3px; }
+
+.user-card {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #2b2c2e;
+  color: #fff; }
+  .user-card .card-id:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .user-card .card-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    float: left;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+    border-radius: 200px; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

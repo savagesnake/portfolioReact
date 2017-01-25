@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-var iconLogo = require("../../public/images/wolfgangIcon.png");
+var iconLogo = require("../../public/images/signature-logo.png");
 import headerHeight from '../scripts/header.js';
 
 export default class Header extends Component{

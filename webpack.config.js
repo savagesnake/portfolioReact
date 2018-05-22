@@ -12,7 +12,7 @@ module.exports = {
   //* hide for dev
   // devtool:"inline-source-map",
   // entry:[
-  //   'webpack-dev-server/client?http://127.0.0.1:8080/',
+  //   'webpack-dev-server/client?/',
   //   'webpack/hot/only-dev-server',
   //   './src'
   // ],
